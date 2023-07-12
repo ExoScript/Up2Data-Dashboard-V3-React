@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { authStatus } from '../database/app'
 
 import { Player } from '@lottiefiles/react-lottie-player'
 
@@ -7,6 +8,42 @@ import './login-box.css'
 const LoginBox = (props) => {
   const [remeber, setRemeber] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [clientID, setClientID] = useState(
+    localStorage.getItem("clientID") || ""
+  );
+  const [secretKey, setSecretKey] = useState(
+    localStorage.getItem("secretKey") || ""
+  );
+
+  useEffect(() => {
+    localStorage.setItem("clientID", clientID);
+    localStorage.setItem("secretKey", secretKey);
+  }, [clientID, secretKey]);
+
+
+  const eventChange = (event) => {
+    const id = event.target.id
+    switch (id) {
+      case 'clientID':
+        setClientID(event.target.value);
+        break;
+      case 'secretKey':
+        setSecretKey(event.target.value);
+        break;
+      default:
+    }
+  };
+
+  const userAuth = async () => {
+    if (clientID && secretKey) {
+      const status = await authStatus();
+      alert(status)
+    };
+
+  }
+
+
+
   return (
     <div className="login-box-login-box">
       <div className="login-box-container border-B shadow-bottom">
@@ -38,6 +75,8 @@ const LoginBox = (props) => {
             </div>
             <div className="login-box-container06">
               <input
+                onChange={eventChange}
+                id="clientID"
                 type="text"
                 placeholder="Enter your Client-ID"
                 className="login-box-textinput input"
@@ -50,6 +89,9 @@ const LoginBox = (props) => {
             </div>
             <div className="login-box-container09">
               <input
+                onChange={eventChange}
+                id="secretKey"
+                value={secretKey}
                 type="text"
                 placeholder="Enter your Secret-Key"
                 className="login-box-textinput1 input"
@@ -86,7 +128,7 @@ const LoginBox = (props) => {
         </div>
       </div>
       <div className="login-box-container14 border-T">
-        <div className="login-box-container15 button-gradient">
+        <div onClick={userAuth} className="login-box-container15 button-gradient">
           {!loading && <span>Login</span>}
           {loading && (
             <div className="login-box-container16">
