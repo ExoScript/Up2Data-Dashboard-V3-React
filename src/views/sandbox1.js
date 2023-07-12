@@ -93,7 +93,7 @@ const Sandbox1 = (props) => {
               </div>
               <div className="sandbox1-container26">
                 <div className="sandbox1-container27">
-                  <span className="sandbox1-text17 opacity-40 font-size-10">
+                  <span className="sandbox1-text17 font-size-10 opacity-40">
                     Text
                   </span>
                 </div>
@@ -108,7 +108,7 @@ const Sandbox1 = (props) => {
               </div>
               <div className="sandbox1-container32">
                 <div className="sandbox1-container33">
-                  <span className="sandbox1-text19 opacity-40 font-size-10">
+                  <span className="sandbox1-text19 font-size-10 opacity-40">
                     Text
                   </span>
                 </div>

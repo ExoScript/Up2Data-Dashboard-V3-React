@@ -6,8 +6,8 @@ import PropTypes from 'prop-types'
 import './company-profile-overview.css'
 
 const CompanyProfileOverview = (props) => {
-  const [profile_menu, setProfile_menu] = useState(0)
   const [edit, setEdit] = useState(false)
+  const [profile_menu, setProfile_menu] = useState(0)
   return (
     <div
       className={`company-profile-overview-company-profile-overview ${props.rootClassName} `}
@@ -95,8 +95,8 @@ const CompanyProfileOverview = (props) => {
           <div className="company-profile-overview-container13 gradient2 border-B shadow-bottom">
             <div className="company-profile-overview-container14 shadow-box">
               <img
-                alt="image"
                 src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDF8fGxvZ298ZW58MHx8fHwxNjg5MTI5MzYwfDA&amp;ixlib=rb-4.0.3&amp;w=200"
+                alt="image"
                 className="company-profile-overview-image"
               />
               <div className="company-profile-overview-container15"></div>
@@ -186,7 +186,7 @@ const CompanyProfileOverview = (props) => {
               )}
               <div className="company-profile-overview-disable">
                 <div className="company-profile-overview-container35">
-                  <span className="company-profile-overview-text23 opacity-40 font-size-10">
+                  <span className="company-profile-overview-text23 font-size-10 opacity-40">
                     {props.profile_menu_1}
                   </span>
                 </div>
@@ -205,7 +205,7 @@ const CompanyProfileOverview = (props) => {
               )}
               <div className="company-profile-overview-disable1">
                 <div className="company-profile-overview-container39">
-                  <span className="company-profile-overview-text25 opacity-40 font-size-10">
+                  <span className="company-profile-overview-text25 font-size-10 opacity-40">
                     {props.profile_menu_2}
                   </span>
                 </div>
@@ -464,15 +464,15 @@ const CompanyProfileOverview = (props) => {
 }
 
 CompanyProfileOverview.defaultProps = {
-  profile_menu_2: 'Employees',
   rootClassName: '',
   profile_menu_1: 'Detail',
+  profile_menu_2: 'Employees',
 }
 
 CompanyProfileOverview.propTypes = {
-  profile_menu_2: PropTypes.string,
   rootClassName: PropTypes.string,
   profile_menu_1: PropTypes.string,
+  profile_menu_2: PropTypes.string,
 }
 
 export default CompanyProfileOverview

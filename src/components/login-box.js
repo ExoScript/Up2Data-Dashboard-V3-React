@@ -8,7 +8,7 @@ import './login-box.css'
 const LoginBox = (props) => {
   const [remeber, setRemeber] = useState(false)
   const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(false)
+  const [login_error, setLogin_error] = useState(false)
   return (
     <div className="login-box-login-box">
       <div className="login-box-container border-B shadow-bottom">
@@ -87,7 +87,7 @@ const LoginBox = (props) => {
           </span>
         </div>
       </div>
-      {error && (
+      {login_error && (
         <div className="login-box-container14 border-T">
           <svg viewBox="0 0 1024 1024" className="login-box-icon4 opacity-70">
             <path d="M554 554v-256h-84v256h84zM554 726v-86h-84v86h84zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
