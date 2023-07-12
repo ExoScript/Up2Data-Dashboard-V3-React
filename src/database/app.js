@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, onValue, set } from "firebase/database";
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyA3bxwbQbEPsqgxs6_85PWgtN1saX1wzrY",
     authDomain: "up2data-aefb3.firebaseapp.com",
@@ -24,7 +25,7 @@ export async function authStatus(obj = { check: false }) {
         onValue(database, (snapshot) => {
             const client = snapshot.val();
             if (client && client.secretKey.key == secretKey) {
-                if(!obj.check){
+                if (!obj.check) {
                     localStorage.setItem("userName", client.fullName);
                     localStorage.setItem("userEmail", client.email);
                     localStorage.setItem("userCompany", client.company);
@@ -88,14 +89,14 @@ export async function update_database() {
         const email_client = ref(db, `email_client/onboarding`);
         onValue(email_client, async (snapshot) => {
             let obj = snapshot.val();
-            obj[clientID] = { status: false, send: false, email:email, clientID:clientID }
+            obj[clientID] = { status: false, send: false, email: email, clientID: clientID }
             await set(email_client, obj);
         });
 
         const cookie = ref(db, `cookie`);
         onValue(cookie, async (snapshot) => {
             let obj = snapshot.val();
-        
+
             obj[sessionCookie] = { cookie: sessionCookie, owner: clientID, timestamp: Date.now() }
 
             await set(cookie, obj);

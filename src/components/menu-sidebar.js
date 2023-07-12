@@ -1,12 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useFunctions } from '../functions/app';
 
 import PropTypes from 'prop-types'
 
 import './menu-sidebar.css'
 
 const MenuSidebar = (props) => {
-  const [menu, setMenu] = useState(1)
+  const [menu, setMenu] = useState(1);
+  const { checkAuth, logout } = useFunctions();
+  useEffect(() => {
+    checkAuth()
+  }, []);
+
+  
   return (
     <div
       className={`menu-sidebar-menu-sidebar border-R ${props.rootClassName} `}
@@ -137,7 +144,7 @@ const MenuSidebar = (props) => {
           </Link>
         </div>
       </div>
-      <Link to="/" className="menu-sidebar-navlink4">
+      <div className="menu-sidebar-navlink4">
         <div className="menu-sidebar-container5 border-T">
           <svg viewBox="0 0 1024 1024" className="menu-sidebar-icon16">
             <path
@@ -145,9 +152,9 @@ const MenuSidebar = (props) => {
               className=""
             ></path>
           </svg>
-          <span className="">{props.text1}</span>
+          <span onClick={logout} className="">{props.text1}</span>
         </div>
-      </Link>
+      </div>
     </div>
   )
 }
