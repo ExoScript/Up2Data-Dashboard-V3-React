@@ -1,0 +1,19 @@
+.notification-button-notification-button {
+  fill: var(--dl-color-primary-content);
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: relative;
+  align-items: center;
+  border-color: var(--dl-color-gray-border);
+  border-width: 1px;
+  border-radius: var(--dl-radius-radius-radius8);
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.notification-button-icon {
+  width: 14px;
+  height: 14px;
+}
