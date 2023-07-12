@@ -279,6 +279,7 @@
 .menu-sidebar-container5 {
   gap: var(--dl-space-space-g20);
   width: 100%;
+  cursor: pointer;
   height: 55px;
   display: flex;
   align-items: center;
