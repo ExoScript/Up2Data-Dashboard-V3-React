@@ -282,11 +282,17 @@
   cursor: pointer;
   height: 55px;
   display: flex;
+  transition: 0.1s;
   align-items: center;
   padding-left: var(--dl-space-space-p20);
   padding-right: var(--dl-space-space-p20);
   flex-direction: row;
   background-color: var(--dl-color-background-bg1);
+}
+.menu-sidebar-container5:hover {
+  fill: var(--dl-color-danger-300);
+  color: var(--dl-color-danger-300);
+  background-color: rgba(162, 32, 32, 0.1);
 }
 .menu-sidebar-icon16 {
   width: 24px;
