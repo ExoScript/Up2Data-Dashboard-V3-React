@@ -3,6 +3,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import MenuSidebar from '../components/menu-sidebar'
+import CompanyProfileOverview from '../components/company-profile-overview'
 import './sandbox.css'
 
 const Sandbox = (props) => {
@@ -51,13 +52,7 @@ const Sandbox = (props) => {
               </div>
             </div>
           </div>
-          <div className="sandbox-container11 border-B">
-            <div className="sandbox-container12">
-              <span className="sandbox-text1">Dashboard</span>
-              <span className="sandbox-text2">Overview</span>
-            </div>
-          </div>
-          <div className="sandbox-container13"></div>
+          <CompanyProfileOverview></CompanyProfileOverview>
         </div>
       </div>
     </div>

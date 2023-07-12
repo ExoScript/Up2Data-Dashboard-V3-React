@@ -13,6 +13,7 @@ import CompanyProfile from './views/company-profile'
 import Contacts from './views/contacts'
 import Sandbox from './views/sandbox'
 import Dashboard from './views/dashboard'
+import Sandbox1 from './views/sandbox1'
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Route component={Contacts} exact path="/contacts" />
         <Route component={Sandbox} exact path="/sandbox" />
         <Route component={Dashboard} exact path="/dashboard" />
+        <Route component={Sandbox1} exact path="/sandbox1" />
       </div>
     </Router>
   )

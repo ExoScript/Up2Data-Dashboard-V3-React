@@ -6,7 +6,7 @@ import MenuSidebar from '../components/menu-sidebar'
 import SearchBar from '../components/search-bar'
 import NotificationButton from '../components/notification-button'
 import ProfileButton from '../components/profile-button'
-import ContactProfileOverview from '../components/contact-profile-overview'
+import CompanyProfileOverview from '../components/company-profile-overview'
 import './company-profile.css'
 
 const CompanyProfile = (props) => {
@@ -29,7 +29,7 @@ const CompanyProfile = (props) => {
               <ProfileButton></ProfileButton>
             </div>
           </div>
-          <ContactProfileOverview></ContactProfileOverview>
+          <CompanyProfileOverview rootClassName="company-profile-overview-root-class-name"></CompanyProfileOverview>
         </div>
       </div>
     </div>

@@ -1,22 +1,19 @@
-.contact-profile-overview-profile-overview {
-  flex: 1;
+.company-profile-overview-company-profile-overview {
   width: 100%;
   display: flex;
-  z-index: 100;
   overflow: hidden;
   position: relative;
   align-items: flex-start;
   flex-direction: column;
-  background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container {
+.company-profile-overview-container {
   width: 100%;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-container001 {
+.company-profile-overview-container01 {
   flex: 0 0 auto;
   width: 100%;
   height: 65px;
@@ -28,41 +25,41 @@
   justify-content: space-between;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container002 {
+.company-profile-overview-container02 {
   gap: var(--dl-space-space-g5);
   flex: 0 0 auto;
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-text {
+.company-profile-overview-text {
   font-size: 21px;
   font-weight: 500;
 }
-.contact-profile-overview-text01 {
+.company-profile-overview-text01 {
   color: var(--dl-color-primary-lila);
   font-size: 21px;
   font-weight: 300;
 }
-.contact-profile-overview-container003 {
+.company-profile-overview-container03 {
   gap: var(--dl-space-space-g10);
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-icon {
+.company-profile-overview-icon {
   width: 14px;
   height: 14px;
 }
-.contact-profile-overview-text02 {
+.company-profile-overview-text02 {
   font-size: 10px;
 }
-.contact-profile-overview-icon02 {
+.company-profile-overview-icon02 {
   width: 14px;
   height: 14px;
 }
-.contact-profile-overview-text03 {
+.company-profile-overview-text03 {
   font-size: 10px;
 }
-.contact-profile-overview-container006 {
+.company-profile-overview-container06 {
   width: 100%;
   height: 55px;
   display: flex;
@@ -73,15 +70,15 @@
   justify-content: space-between;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container007 {
+.company-profile-overview-container07 {
   gap: var(--dl-space-space-g10);
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-navlink {
+.company-profile-overview-navlink {
   display: contents;
 }
-.contact-profile-overview-container008 {
+.company-profile-overview-container08 {
   fill: var(--dl-color-primary-content);
   width: 30px;
   cursor: pointer;
@@ -96,31 +93,31 @@
   text-decoration: none;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container008:hover {
+.company-profile-overview-container08:hover {
   fill: var(--dl-color-gray-white);
   background-color: var(--dl-color-primary-lila);
 }
-.contact-profile-overview-icon04 {
+.company-profile-overview-icon04 {
   width: 14px;
   height: 14px;
 }
-.contact-profile-overview-text04 {
+.company-profile-overview-text04 {
   font-style: normal;
   font-weight: 700;
 }
-.contact-profile-overview-container009 {
+.company-profile-overview-container09 {
   gap: var(--dl-space-space-g10);
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-text05 {
+.company-profile-overview-text05 {
   font-style: normal;
   font-weight: 700;
 }
-.contact-profile-overview-navlink1 {
+.company-profile-overview-navlink1 {
   display: contents;
 }
-.contact-profile-overview-container010 {
+.company-profile-overview-container10 {
   fill: var(--dl-color-primary-content);
   width: 30px;
   cursor: pointer;
@@ -135,15 +132,15 @@
   text-decoration: none;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container010:hover {
+.company-profile-overview-container10:hover {
   fill: var(--dl-color-gray-white);
   background-color: var(--dl-color-primary-lila);
 }
-.contact-profile-overview-icon06 {
+.company-profile-overview-icon06 {
   width: 14px;
   height: 14px;
 }
-.contact-profile-overview-container011 {
+.company-profile-overview-container11 {
   gap: var(--dl-space-space-g20);
   flex: 1;
   width: 100%;
@@ -157,29 +154,30 @@
   padding-bottom: var(--dl-space-space-p20);
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container012 {
+.company-profile-overview-container12 {
   width: 100%;
   display: flex;
   overflow: hidden;
   align-items: flex-start;
   border-color: var(--dl-color-gray-border);
+  border-style: solid;
   border-width: 1px;
   border-radius: var(--dl-radius-radius-radius8);
   flex-direction: column;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container013 {
+.company-profile-overview-container13 {
   gap: var(--dl-space-space-g40);
+  flex: 0 0 auto;
   width: 100%;
   height: 190px;
   display: flex;
   padding: var(--dl-space-space-p20);
   align-items: flex-start;
   flex-direction: row;
-  background-color: var(--dl-color-background-bg1);
-  background-image: linear-gradient(45deg, rgb(246, 248, 252) 23.00%,rgb(218, 227, 249) 99.00%);
 }
-.contact-profile-overview-container014 {
+.company-profile-overview-container14 {
+  flex: 0 0 auto;
   width: 150px;
   height: 150px;
   display: flex;
@@ -188,15 +186,15 @@
   align-items: flex-start;
   border-color: var(--dl-color-gray-border);
   border-width: 1px;
-  border-radius: 15px;
+  border-radius: var(--dl-radius-radius-radius8);
   flex-direction: column;
 }
-.contact-profile-overview-image {
+.company-profile-overview-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.contact-profile-overview-container015 {
+.company-profile-overview-container15 {
   top: 0px;
   flex: 0 0 auto;
   left: 0px;
@@ -205,9 +203,10 @@
   display: flex;
   position: absolute;
   align-items: flex-start;
+  flex-direction: column;
   background-image: linear-gradient(180deg, rgba(189, 195, 199, 0) 54.00%,rgba(0, 0, 0, 0.6) 100.00%);
 }
-.contact-profile-overview-container016 {
+.company-profile-overview-container16 {
   flex: 1;
   height: 100%;
   display: flex;
@@ -215,7 +214,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.contact-profile-overview-container017 {
+.company-profile-overview-container17 {
+  flex: 0 0 auto;
   width: 100%;
   display: flex;
   align-items: flex-start;
@@ -223,55 +223,26 @@
   padding-bottom: var(--dl-space-space-p10);
   justify-content: space-between;
 }
-.contact-profile-overview-container018 {
+.company-profile-overview-container18 {
   gap: var(--dl-space-space-g20);
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.contact-profile-overview-container019 {
-  gap: var(--dl-space-space-g20);
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
-.contact-profile-overview-text06 {
-  color: var(--dl-color-primary-lila);
+.company-profile-overview-text06 {
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
 }
-.contact-profile-overview-container020 {
-  gap: var(--dl-space-space-g10);
-  fill: var(--dl-color-gray-white);
-  color: var(--dl-color-gray-white);
-  display: flex;
-  align-items: center;
-  padding-top: var(--dl-space-space-p5);
-  padding-left: var(--dl-space-space-p10);
-  border-radius: var(--dl-radius-radius-radius8);
-  padding-right: var(--dl-space-space-p10);
-  flex-direction: row;
-  padding-bottom: var(--dl-space-space-p5);
-  background-color: var(--dl-color-primary-lila);
-}
-.contact-profile-overview-icon08 {
-  width: 12px;
-  height: 12px;
-}
-.contact-profile-overview-container021 {
+.company-profile-overview-container19 {
   gap: var(--dl-space-space-g10);
   flex: 0 0 auto;
   width: 100%;
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-text08 {
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container022 {
+.company-profile-overview-container20 {
   flex: 0 0 auto;
   width: 5px;
   height: 5px;
@@ -281,11 +252,7 @@
   flex-direction: column;
   background-color: var(--dl-color-gray-border);
 }
-.contact-profile-overview-text09 {
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container023 {
+.company-profile-overview-container21 {
   flex: 0 0 auto;
   width: 5px;
   height: 5px;
@@ -295,22 +262,18 @@
   flex-direction: column;
   background-color: var(--dl-color-gray-border);
 }
-.contact-profile-overview-text10 {
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container024 {
+.company-profile-overview-container22 {
   gap: var(--dl-space-space-g10);
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-text11 {
+.company-profile-overview-text10 {
   font-size: 11px;
 }
-.contact-profile-overview-text12 {
+.company-profile-overview-text11 {
   font-size: 10px;
 }
-.contact-profile-overview-container027 {
+.company-profile-overview-container25 {
   gap: var(--dl-space-space-g20);
   flex: 0 0 auto;
   width: 100%;
@@ -318,7 +281,7 @@
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-container028 {
+.company-profile-overview-container26 {
   gap: var(--dl-space-space-g5);
   width: auto;
   height: auto;
@@ -327,15 +290,15 @@
   padding-right: var(--dl-space-space-p20);
   flex-direction: column;
 }
-.contact-profile-overview-text13 {
+.company-profile-overview-text12 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-text14 {
+.company-profile-overview-text13 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-container029 {
+.company-profile-overview-container27 {
   gap: var(--dl-space-space-g5);
   height: auto;
   display: flex;
@@ -343,15 +306,15 @@
   padding-right: var(--dl-space-space-p20);
   flex-direction: column;
 }
-.contact-profile-overview-text15 {
+.company-profile-overview-text14 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-text16 {
+.company-profile-overview-text15 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-container030 {
+.company-profile-overview-container28 {
   gap: var(--dl-space-space-g5);
   height: auto;
   display: flex;
@@ -359,32 +322,15 @@
   padding-right: var(--dl-space-space-p20);
   flex-direction: column;
 }
-.contact-profile-overview-text17 {
+.company-profile-overview-text16 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-text18 {
+.company-profile-overview-text17 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-container031 {
-  gap: var(--dl-space-space-g5);
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  padding-right: var(--dl-space-space-p20);
-  flex-direction: column;
-}
-.contact-profile-overview-text19 {
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-text20 {
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container032 {
+.company-profile-overview-container29 {
   gap: var(--dl-space-space-g5);
   width: auto;
   height: auto;
@@ -393,15 +339,32 @@
   padding-right: var(--dl-space-space-p20);
   flex-direction: column;
 }
-.contact-profile-overview-text21 {
+.company-profile-overview-text18 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-text22 {
+.company-profile-overview-text19 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-container033 {
+.company-profile-overview-container30 {
+  gap: var(--dl-space-space-g5);
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  padding-right: var(--dl-space-space-p20);
+  flex-direction: column;
+}
+.company-profile-overview-text20 {
+  font-style: normal;
+  font-weight: 400;
+}
+.company-profile-overview-text21 {
+  font-style: normal;
+  font-weight: 400;
+}
+.company-profile-overview-container31 {
   flex: 0 0 auto;
   width: 100%;
   height: 45px;
@@ -410,58 +373,103 @@
   padding-left: var(--dl-space-space-p20);
   padding-right: var(--dl-space-space-p20);
 }
-.contact-profile-overview-container034 {
+.company-profile-overview-container32 {
   height: 100%;
   display: flex;
   position: relative;
   align-items: center;
-}
-.contact-profile-overview-container035 {
-  gap: var(--dl-space-space-g5);
-  color: var(--dl-color-primary-content);
-  cursor: pointer;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  font-weight: 700;
-  flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-container036 {
-  display: flex;
-  align-items: center;
-  padding-left: var(--dl-space-space-p10);
-  padding-right: var(--dl-space-space-p10);
-  flex-direction: column;
-  justify-content: center;
-}
-.contact-profile-overview-text23 {
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container037 {
-  gap: var(--dl-space-space-g5);
-  left: 0px;
-  color: var(--dl-color-primary-lila);
-  right: 0px;
+.company-profile-overview-enable {
+  flex: 0 0 auto;
   height: 100%;
   display: flex;
+  z-index: 80;
   position: absolute;
-  align-items: center;
-  font-weight: 700;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container038 {
+.company-profile-overview-container33 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-left: var(--dl-space-space-p10);
   padding-right: var(--dl-space-space-p10);
   flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-container039 {
+.company-profile-overview-text22 {
+  color: var(--dl-color-primary-lila);
+  font-style: normal;
+  font-weight: 700;
+}
+.company-profile-overview-container34 {
+  flex: 0 0 auto;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  bottom: 5px;
+  height: 2px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  border-radius: 1px;
+  background-color: var(--dl-color-primary-lila);
+}
+.company-profile-overview-disable {
+  flex: 0 0 auto;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+.company-profile-overview-container35 {
+  display: flex;
+  align-items: flex-start;
+  padding-left: var(--dl-space-space-p10);
+  padding-right: var(--dl-space-space-p10);
+  flex-direction: column;
+  justify-content: center;
+}
+.company-profile-overview-text23 {
+  font-style: normal;
+  font-weight: 400;
+}
+.company-profile-overview-container36 {
+  height: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.company-profile-overview-enable1 {
+  flex: 0 0 auto;
+  height: 100%;
+  display: flex;
+  z-index: 80;
+  position: absolute;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--dl-color-gray-white);
+}
+.company-profile-overview-container37 {
+  display: flex;
+  align-items: flex-start;
+  padding-left: var(--dl-space-space-p10);
+  padding-right: var(--dl-space-space-p10);
+  flex-direction: column;
+  justify-content: center;
+}
+.company-profile-overview-text24 {
+  color: var(--dl-color-primary-lila);
+  font-style: normal;
+  font-weight: 700;
+}
+.company-profile-overview-container38 {
   flex: 0 0 auto;
   width: 100%;
   bottom: 5px;
@@ -472,203 +480,28 @@
   border-radius: 1px;
   background-color: var(--dl-color-primary-lila);
 }
-.contact-profile-overview-container040 {
-  height: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-}
-.contact-profile-overview-container041 {
-  gap: var(--dl-space-space-g5);
-  color: var(--dl-color-primary-content);
+.company-profile-overview-disable1 {
+  flex: 0 0 auto;
   cursor: pointer;
   height: 100%;
   display: flex;
-  align-items: center;
-  font-weight: 700;
+  align-items: flex-start;
   flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-container042 {
+.company-profile-overview-container39 {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-left: var(--dl-space-space-p10);
   padding-right: var(--dl-space-space-p10);
   flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-text25 {
+.company-profile-overview-text25 {
   font-style: normal;
   font-weight: 400;
 }
-.contact-profile-overview-container043 {
-  gap: var(--dl-space-space-g5);
-  left: 0px;
-  color: var(--dl-color-primary-lila);
-  right: 0px;
-  height: 100%;
-  display: flex;
-  position: absolute;
-  align-items: center;
-  font-weight: 700;
-  flex-direction: column;
-  justify-content: center;
-  background-color: var(--dl-color-gray-white);
-}
-.contact-profile-overview-container044 {
-  display: flex;
-  align-items: center;
-  padding-left: var(--dl-space-space-p10);
-  padding-right: var(--dl-space-space-p10);
-  flex-direction: column;
-  justify-content: center;
-}
-.contact-profile-overview-container045 {
-  flex: 0 0 auto;
-  width: 100%;
-  bottom: 5px;
-  height: 2px;
-  display: flex;
-  position: absolute;
-  align-items: flex-start;
-  border-radius: 1px;
-  background-color: var(--dl-color-primary-lila);
-}
-.contact-profile-overview-container046 {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  overflow: hidden;
-  align-items: flex-start;
-  border-color: var(--dl-color-gray-border);
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
-  flex-direction: column;
-  background-color: var(--dl-color-background-bg1);
-}
-.contact-profile-overview-container047 {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  padding-left: var(--dl-space-space-p20);
-  padding-right: var(--dl-space-space-p20);
-}
-.contact-profile-overview-container048 {
-  gap: var(--dl-space-space-p5);
-  display: flex;
-  align-items: center;
-}
-.contact-profile-overview-text27 {
-  font-style: normal;
-  font-weight: 700;
-}
-.contact-profile-overview-text28 {
-  color: var(--dl-color-primary-lila);
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container049 {
-  flex: 0 0 auto;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  z-index: 100;
-  align-items: center;
-  font-weight: 700;
-  padding-left: var(--dl-space-space-p30);
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.contact-profile-overview-container050 {
-  flex: 0.8;
-  display: flex;
-  opacity: 0.7;
-  align-items: center;
-  padding-top: var(--dl-space-space-p5);
-  padding-bottom: var(--dl-space-space-p5);
-}
-.contact-profile-overview-text29 {
-  opacity: 0.7;
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container051 {
-  flex: 0.5;
-  display: flex;
-  opacity: 0.7;
-  align-items: center;
-  padding-top: var(--dl-space-space-p5);
-  padding-left: var(--dl-space-space-p10);
-  padding-bottom: var(--dl-space-space-p5);
-}
-.contact-profile-overview-text30 {
-  opacity: 0.7;
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container052 {
-  flex: 0.3;
-  display: flex;
-  opacity: 0.7;
-  align-items: center;
-  padding-top: var(--dl-space-space-p5);
-  padding-left: var(--dl-space-space-p10);
-  padding-bottom: var(--dl-space-space-p5);
-}
-.contact-profile-overview-text31 {
-  opacity: 0.7;
-  font-style: normal;
-  font-weight: 400;
-}
-.contact-profile-overview-container053 {
-  width: 140px;
-  display: flex;
-  opacity: 0.7;
-  align-items: center;
-  padding-top: var(--dl-space-space-p5);
-  padding-left: var(--dl-space-space-p10);
-  padding-bottom: var(--dl-space-space-p5);
-}
-.contact-profile-overview-text32 {
-  opacity: 0.7;
-  font-weight: normal;
-}
-.contact-profile-overview-container054 {
-  width: 80px;
-  display: flex;
-  opacity: 0.7;
-  align-items: center;
-  padding-top: var(--dl-space-space-p5);
-  padding-left: var(--dl-space-space-p10);
-  padding-bottom: var(--dl-space-space-p5);
-}
-.contact-profile-overview-text33 {
-  opacity: 0.7;
-  font-weight: normal;
-}
-.contact-profile-overview-container055 {
-  width: 220px;
-  display: flex;
-  opacity: 0.7;
-  align-items: center;
-  padding-top: var(--dl-space-space-p5);
-  padding-right: var(--dl-space-space-p30);
-  padding-bottom: var(--dl-space-space-p5);
-  justify-content: flex-end;
-}
-.contact-profile-overview-text34 {
-  opacity: 0.7;
-}
-.contact-profile-overview-container056 {
-  flex: 1;
-  width: 100%;
-  display: flex;
-  overflow: scroll;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.contact-profile-overview-container057 {
+.company-profile-overview-container40 {
   gap: var(--dl-space-space-g20);
   flex: 1;
   width: 100%;
@@ -676,19 +509,21 @@
   overflow: hidden;
   align-items: flex-start;
 }
-.contact-profile-overview-container058 {
+.company-profile-overview-container41 {
   flex: 0.7;
   width: 200px;
   height: 100%;
   display: flex;
-  overflow: hidden;
+  overflow: scroll;
   position: relative;
   align-items: flex-start;
+  border-color: var(--dl-color-gray-border);
+  border-width: 1px;
   border-radius: var(--dl-radius-radius-radius8);
   flex-direction: column;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container059 {
+.company-profile-overview-container42 {
   flex: 0 0 auto;
   color: var(--dl-color-gray-white);
   width: 100%;
@@ -699,29 +534,26 @@
   padding-right: var(--dl-space-space-p20);
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-container060 {
+.company-profile-overview-container43 {
   gap: var(--dl-space-space-g5);
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-text35 {
+.company-profile-overview-text26 {
   font-style: normal;
   font-weight: 700;
 }
-.contact-profile-overview-container061 {
+.company-profile-overview-container44 {
   flex: 1;
   width: 100%;
   display: flex;
-  overflow: scroll;
+  overflow: hidden;
   align-items: flex-start;
-  border-color: var(--dl-color-gray-border);
-  border-width: 1px;
-  border-radius: var(--dl-radius-radius-radius8);
   flex-direction: column;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-.contact-profile-overview-container062 {
+.company-profile-overview-container45 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -735,10 +567,10 @@
   padding-bottom: var(--dl-space-space-p15);
   justify-content: center;
 }
-.contact-profile-overview-text37 {
+.company-profile-overview-text28 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container063 {
+.company-profile-overview-container46 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -750,11 +582,11 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-textinput {
+.company-profile-overview-textinput {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container064 {
+.company-profile-overview-container47 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -768,10 +600,10 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-text38 {
+.company-profile-overview-text29 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container065 {
+.company-profile-overview-container48 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -783,11 +615,11 @@
   justify-content: center;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-textinput1 {
+.company-profile-overview-textinput1 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container066 {
+.company-profile-overview-container49 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -802,10 +634,10 @@
   padding-bottom: var(--dl-space-space-p15);
   justify-content: center;
 }
-.contact-profile-overview-text39 {
+.company-profile-overview-text30 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container067 {
+.company-profile-overview-container50 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -817,11 +649,11 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-textinput2 {
+.company-profile-overview-textinput2 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container068 {
+.company-profile-overview-container51 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -835,10 +667,10 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-text40 {
+.company-profile-overview-text31 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container069 {
+.company-profile-overview-container52 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -850,11 +682,11 @@
   justify-content: center;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-textinput3 {
+.company-profile-overview-textinput3 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container070 {
+.company-profile-overview-container53 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -868,10 +700,10 @@
   padding-bottom: var(--dl-space-space-p15);
   justify-content: center;
 }
-.contact-profile-overview-text41 {
+.company-profile-overview-text32 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container071 {
+.company-profile-overview-container54 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -883,11 +715,11 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-textinput4 {
+.company-profile-overview-textinput4 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container072 {
+.company-profile-overview-container55 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -901,10 +733,10 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-text42 {
+.company-profile-overview-text33 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container073 {
+.company-profile-overview-container56 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -916,11 +748,11 @@
   justify-content: center;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-textinput5 {
+.company-profile-overview-textinput5 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container074 {
+.company-profile-overview-container57 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -934,10 +766,10 @@
   padding-bottom: var(--dl-space-space-p15);
   justify-content: center;
 }
-.contact-profile-overview-text43 {
+.company-profile-overview-text34 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container075 {
+.company-profile-overview-container58 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -949,11 +781,11 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-textinput6 {
+.company-profile-overview-textinput6 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container076 {
+.company-profile-overview-container59 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -967,10 +799,10 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-text44 {
+.company-profile-overview-text35 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container077 {
+.company-profile-overview-container60 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -982,11 +814,11 @@
   justify-content: center;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-textinput7 {
+.company-profile-overview-textinput7 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container078 {
+.company-profile-overview-container61 {
   gap: var(--dl-space-space-g10);
   flex: 1;
   width: 100%;
@@ -999,10 +831,10 @@
   padding-bottom: var(--dl-space-space-p15);
   justify-content: center;
 }
-.contact-profile-overview-text45 {
+.company-profile-overview-text36 {
   padding-left: var(--dl-space-space-p5);
 }
-.contact-profile-overview-container079 {
+.company-profile-overview-container62 {
   width: 100%;
   height: 35px;
   display: flex;
@@ -1014,11 +846,11 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-textinput8 {
+.company-profile-overview-textinput8 {
   width: 100%;
   background-color: transparent;
 }
-.contact-profile-overview-container080 {
+.company-profile-overview-container63 {
   flex: 0 0 auto;
   width: 100%;
   bottom: 0px;
@@ -1032,7 +864,7 @@
   justify-content: space-between;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-container081 {
+.company-profile-overview-container64 {
   gap: var(--dl-space-space-g10);
   fill: var(--dl-color-primary-content);
   flex: 0 0 auto;
@@ -1051,14 +883,14 @@
   justify-content: center;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container081:hover {
+.company-profile-overview-container64:hover {
   opacity: 1;
 }
-.contact-profile-overview-icon10 {
+.company-profile-overview-icon08 {
   width: 14px;
   height: 14px;
 }
-.contact-profile-overview-container082 {
+.company-profile-overview-container65 {
   gap: var(--dl-space-space-g10);
   fill: var(--dl-color-gray-white);
   flex: 0 0 auto;
@@ -1078,16 +910,16 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.contact-profile-overview-container082:hover {
+.company-profile-overview-container65:hover {
   fill: var(--dl-color-primary-content);
   color: var(--dl-color-primary-content);
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-icon12 {
+.company-profile-overview-icon10 {
   width: 14px;
   height: 14px;
 }
-.contact-profile-overview-container083 {
+.company-profile-overview-container66 {
   flex: 0 0 auto;
   width: 100%;
   border: 2px dashed rgba(120, 120, 120, 0.4);
@@ -1101,7 +933,7 @@
   justify-content: space-between;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-container084 {
+.company-profile-overview-container67 {
   flex: 1;
   width: 200px;
   height: 100%;
@@ -1114,7 +946,7 @@
   flex-direction: column;
   background-color: var(--dl-color-background-bg2);
 }
-.contact-profile-overview-container085 {
+.company-profile-overview-container68 {
   flex: 0 0 auto;
   color: var(--dl-color-primary-content);
   width: 100%;
@@ -1125,19 +957,19 @@
   padding-right: var(--dl-space-space-p20);
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-container086 {
+.company-profile-overview-container69 {
   gap: var(--dl-space-space-g5);
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-text48 {
+.company-profile-overview-text39 {
   font-style: normal;
   font-weight: 700;
 }
-.contact-profile-overview-text49 {
+.company-profile-overview-text40 {
   color: var(--dl-color-primary-lila);
 }
-.contact-profile-overview-container087 {
+.company-profile-overview-container70 {
   gap: var(--dl-space-space-g10);
   flex: 0 0 auto;
   width: 100%;
@@ -1146,13 +978,13 @@
   align-items: center;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container088 {
+.company-profile-overview-container71 {
   flex: 1;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.contact-profile-overview-container089 {
+.company-profile-overview-container72 {
   width: 150px;
   height: 100%;
   display: flex;
@@ -1160,7 +992,7 @@
   padding-left: var(--dl-space-space-p20);
   padding-right: var(--dl-space-space-p20);
 }
-.contact-profile-overview-container090 {
+.company-profile-overview-container73 {
   flex: 1;
   height: 100%;
   display: flex;
@@ -1168,7 +1000,7 @@
   padding-left: var(--dl-space-space-p20);
   padding-right: var(--dl-space-space-p20);
 }
-.contact-profile-overview-container091 {
+.company-profile-overview-container74 {
   flex: 0.2;
   height: 100%;
   display: flex;
@@ -1176,13 +1008,13 @@
   padding-right: var(--dl-space-space-p20);
   justify-content: flex-end;
 }
-.contact-profile-overview-container092 {
+.company-profile-overview-container75 {
   width: 100%;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
 }
-.contact-profile-overview-container093 {
+.company-profile-overview-container76 {
   gap: var(--dl-space-space-g10);
   flex: 0 0 auto;
   width: 100%;
@@ -1191,13 +1023,13 @@
   align-items: flex-start;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container094 {
+.company-profile-overview-container77 {
   flex: 1;
   height: 100%;
   display: flex;
   align-items: flex-start;
 }
-.contact-profile-overview-container095 {
+.company-profile-overview-container78 {
   width: 150px;
   height: 100%;
   display: flex;
@@ -1207,7 +1039,7 @@
   flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-container097 {
+.company-profile-overview-container80 {
   flex: 1;
   width: 200px;
   height: 100%;
@@ -1219,7 +1051,7 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-container098 {
+.company-profile-overview-container81 {
   gap: var(--dl-space-space-g5);
   flex: 0.2;
   width: 200px;
@@ -1230,18 +1062,18 @@
   flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-container099 {
+.company-profile-overview-container82 {
   gap: var(--dl-space-space-g5);
   display: flex;
   align-items: flex-end;
   flex-direction: row;
   justify-content: center;
 }
-.contact-profile-overview-text57 {
+.company-profile-overview-text48 {
   font-style: normal;
   font-weight: 700;
 }
-.contact-profile-overview-container100 {
+.company-profile-overview-container83 {
   gap: var(--dl-space-space-g10);
   flex: 0 0 auto;
   width: 100%;
@@ -1250,13 +1082,13 @@
   align-items: flex-start;
   background-color: var(--dl-color-gray-white);
 }
-.contact-profile-overview-container101 {
+.company-profile-overview-container84 {
   flex: 1;
   height: 100%;
   display: flex;
   align-items: flex-start;
 }
-.contact-profile-overview-container102 {
+.company-profile-overview-container85 {
   width: 150px;
   height: 100%;
   display: flex;
@@ -1266,10 +1098,10 @@
   flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-text58 {
+.company-profile-overview-text49 {
   font-size: 10px;
 }
-.contact-profile-overview-container104 {
+.company-profile-overview-container87 {
   flex: 1;
   width: 200px;
   height: 100%;
@@ -1281,10 +1113,10 @@
   justify-content: center;
   background-color: var(--dl-color-background-bg1);
 }
-.contact-profile-overview-text59 {
+.company-profile-overview-text50 {
   opacity: 0.9;
 }
-.contact-profile-overview-container105 {
+.company-profile-overview-container88 {
   gap: var(--dl-space-space-g5);
   flex: 0.2;
   width: 200px;
@@ -1295,24 +1127,25 @@
   flex-direction: column;
   justify-content: center;
 }
-.contact-profile-overview-text60 {
+.company-profile-overview-text51 {
   opacity: 0.9;
   font-size: 10px;
 }
-.contact-profile-overview-container106 {
+.company-profile-overview-container89 {
   gap: var(--dl-space-space-g5);
   display: flex;
   align-items: flex-end;
   flex-direction: row;
   justify-content: center;
 }
-.contact-profile-overview-text61 {
+.company-profile-overview-text52 {
   opacity: 0.6;
   font-size: 11px;
 }
-.contact-profile-overview-text62 {
+.company-profile-overview-text53 {
   opacity: 0.9;
   font-size: 11px;
   font-style: normal;
   font-weight: 700;
 }
+

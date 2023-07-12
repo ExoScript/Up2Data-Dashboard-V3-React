@@ -299,7 +299,7 @@ const ContactProfileOverview = (props) => {
               >
                 <div className="contact-profile-overview-container060">
                   <span className="contact-profile-overview-text35 font-size-10">
-                    Profile
+                    Contact
                   </span>
                   <span className="opacity-70 font-size-10">details</span>
                 </div>
@@ -538,29 +538,13 @@ const ContactProfileOverview = (props) => {
 }
 
 ContactProfileOverview.defaultProps = {
-  textinput_placeholder1: 'placeholder',
-  text4: 'Text',
-  text2: 'Text',
   profile_menu_1: 'Detail',
-  text: 'Text',
-  text1: 'Text',
-  textinput_placeholder2: 'placeholder',
-  textinput_placeholder: 'placeholder',
   profile_menu_2: 'Colleagues',
-  text3: 'Text',
 }
 
 ContactProfileOverview.propTypes = {
-  textinput_placeholder1: PropTypes.string,
-  text4: PropTypes.string,
-  text2: PropTypes.string,
   profile_menu_1: PropTypes.string,
-  text: PropTypes.string,
-  text1: PropTypes.string,
-  textinput_placeholder2: PropTypes.string,
-  textinput_placeholder: PropTypes.string,
   profile_menu_2: PropTypes.string,
-  text3: PropTypes.string,
 }
 
 export default ContactProfileOverview

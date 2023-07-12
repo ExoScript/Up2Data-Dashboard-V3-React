@@ -1,15 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import { useFunctions } from '../functions/app';
+import React, { useState } from 'react'
 
 import { Player } from '@lottiefiles/react-lottie-player'
+import PropTypes from 'prop-types'
 
 import './login-box.css'
 
 const LoginBox = (props) => {
   const [remeber, setRemeber] = useState(false)
   const [loading, setLoading] = useState(false)
-  const { clientID, setClientID, secretKey, setSecretKey, location, eventChange, userAuth } = useFunctions();
- 
+  const [error, setError] = useState(false)
   return (
     <div className="login-box-login-box">
       <div className="login-box-container border-B shadow-bottom">
@@ -41,9 +40,6 @@ const LoginBox = (props) => {
             </div>
             <div className="login-box-container06">
               <input
-                onChange={eventChange}
-                id="clientID"
-                value={clientID}
                 type="text"
                 placeholder="Enter your Client-ID"
                 className="login-box-textinput input"
@@ -56,9 +52,6 @@ const LoginBox = (props) => {
             </div>
             <div className="login-box-container09">
               <input
-                onChange={eventChange}
-                id="secretKey"
-                value={secretKey}
                 type="text"
                 placeholder="Enter your Secret-Key"
                 className="login-box-textinput1 input"
@@ -94,25 +87,48 @@ const LoginBox = (props) => {
           </span>
         </div>
       </div>
-      <div className="login-box-container14 border-T">
-        <div onClick={userAuth} className="login-box-container15 button-gradient">
+      {error && (
+        <div className="login-box-container14 border-T">
+          <svg viewBox="0 0 1024 1024" className="login-box-icon4 opacity-70">
+            <path d="M554 554v-256h-84v256h84zM554 726v-86h-84v86h84zM512 86q176 0 301 125t125 301-125 301-301 125-301-125-125-301 125-301 301-125z"></path>
+          </svg>
+          <div className="login-box-container15">
+            <span className="login-box-text13 opacity-90">
+              {props.error_title}
+            </span>
+            <span className="login-box-text14 opacity-90">
+              {props.error_text}
+            </span>
+          </div>
+        </div>
+      )}
+      <div className="login-box-container16 border-T">
+        <div className="login-box-container17 button-gradient">
           {!loading && <span>Login</span>}
           {loading && (
-            <div className="login-box-container16">
-              <Player
-                src="https://assets7.lottiefiles.com/packages/lf20_fyye8szy.json"
-                loop
-                speed="1"
-                autoplay
-                background="transparent"
-                className="login-box-lottie-node"
-              ></Player>
-            </div>
+            <Player
+              src="https://lottie.host/74c249cd-4aee-4698-a570-06bb913d7f0d/aiteJNhVll.json"
+              loop
+              speed="1"
+              autoplay
+              background="transparent"
+              className="login-box-lottie-node"
+            ></Player>
           )}
         </div>
       </div>
     </div>
   )
+}
+
+LoginBox.defaultProps = {
+  error_text: 'Please check your Client-ID and Secret-Key.',
+  error_title: 'Something has gone wrong!',
+}
+
+LoginBox.propTypes = {
+  error_text: PropTypes.string,
+  error_title: PropTypes.string,
 }
 
 export default LoginBox
