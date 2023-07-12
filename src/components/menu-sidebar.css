@@ -276,9 +276,6 @@
   width: 18px;
   height: 18px;
 }
-.menu-sidebar-navlink4 {
-  display: contents;
-}
 .menu-sidebar-container5 {
   gap: var(--dl-space-space-g20);
   width: 100%;
@@ -288,7 +285,6 @@
   padding-left: var(--dl-space-space-p20);
   padding-right: var(--dl-space-space-p20);
   flex-direction: row;
-  text-decoration: none;
   background-color: var(--dl-color-background-bg1);
 }
 .menu-sidebar-icon16 {

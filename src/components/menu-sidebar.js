@@ -1,19 +1,12 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useFunctions } from '../functions/app';
 
 import PropTypes from 'prop-types'
 
 import './menu-sidebar.css'
 
 const MenuSidebar = (props) => {
-  const [menu, setMenu] = useState(1);
-  const { checkAuth, logout } = useFunctions();
-  useEffect(() => {
-    checkAuth()
-  }, []);
-
-  
+  const [menu, setMenu] = useState(1)
   return (
     <div
       className={`menu-sidebar-menu-sidebar border-R ${props.rootClassName} `}
@@ -144,16 +137,14 @@ const MenuSidebar = (props) => {
           </Link>
         </div>
       </div>
-      <div className="menu-sidebar-navlink4">
-        <div className="menu-sidebar-container5 border-T">
-          <svg viewBox="0 0 1024 1024" className="menu-sidebar-icon16">
-            <path
-              d="M170 214v596h342v86h-342q-34 0-59-26t-25-60v-596q0-34 25-60t59-26h342v86h-342zM726 298l212 214-212 214-60-62 110-110h-434v-84h434l-110-112z"
-              className=""
-            ></path>
-          </svg>
-          <span onClick={logout} className="">{props.text1}</span>
-        </div>
+      <div className="menu-sidebar-container5 border-T">
+        <svg viewBox="0 0 1024 1024" className="menu-sidebar-icon16">
+          <path
+            d="M170 214v596h342v86h-342q-34 0-59-26t-25-60v-596q0-34 25-60t59-26h342v86h-342zM726 298l212 214-212 214-60-62 110-110h-434v-84h434l-110-112z"
+            className=""
+          ></path>
+        </svg>
+        <span className="">Logout</span>
       </div>
     </div>
   )
@@ -162,7 +153,6 @@ const MenuSidebar = (props) => {
 MenuSidebar.defaultProps = {
   menu_4: 'Leads',
   rootClassName: '',
-  text1: 'Logout',
   menu_2: 'Companies',
   menu_1: 'Dashboard',
   menu_3: 'Contacts',
@@ -171,7 +161,6 @@ MenuSidebar.defaultProps = {
 MenuSidebar.propTypes = {
   menu_4: PropTypes.string,
   rootClassName: PropTypes.string,
-  text1: PropTypes.string,
   menu_2: PropTypes.string,
   menu_1: PropTypes.string,
   menu_3: PropTypes.string,

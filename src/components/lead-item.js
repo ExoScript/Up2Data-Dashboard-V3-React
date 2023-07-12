@@ -159,25 +159,25 @@ const LeadItem = (props) => {
 }
 
 LeadItem.defaultProps = {
-  rootClassName: '',
-  name: 'Deivisson Almeida de Souza',
   position: 'Fullstack Developer',
-  old_company_name: 'HeyData GmbH',
-  old_position: 'Fullstack Developer',
-  new_company_name: 'Flaschenpost GmbH',
   new_position: 'Fullstack Developer',
+  name: 'Deivisson Almeida de Souza',
+  rootClassName: '',
+  old_company_name: 'HeyData GmbH',
   date: '12.Feb.2023',
+  new_company_name: 'Flaschenpost GmbH',
+  old_position: 'Fullstack Developer',
 }
 
 LeadItem.propTypes = {
-  rootClassName: PropTypes.string,
-  name: PropTypes.string,
   position: PropTypes.string,
-  old_company_name: PropTypes.string,
-  old_position: PropTypes.string,
-  new_company_name: PropTypes.string,
   new_position: PropTypes.string,
+  name: PropTypes.string,
+  rootClassName: PropTypes.string,
+  old_company_name: PropTypes.string,
   date: PropTypes.string,
+  new_company_name: PropTypes.string,
+  old_position: PropTypes.string,
 }
 
 export default LeadItem
