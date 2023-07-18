@@ -14,7 +14,7 @@ const Companies = (props) => {
         <meta property="og:title" content="Companies - Up2Data-Dashboard-V3" />
       </Helmet>
       <div className="companies-container1">
-        <MenuSidebar rootClassName="menu-sidebar-root-class-name1"></MenuSidebar>
+        <MenuSidebar menu={2} rootClassName="menu-sidebar-root-class-name1"></MenuSidebar>
         <CompanyOverview></CompanyOverview>
       </div>
     </div>

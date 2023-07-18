@@ -14,7 +14,7 @@ const Contacts = (props) => {
         <meta property="og:title" content="Contacts - Up2Data-Dashboard-V3" />
       </Helmet>
       <div className="contacts-container1">
-        <MenuSidebar rootClassName="menu-sidebar-root-class-name2"></MenuSidebar>
+        <MenuSidebar menu={3} rootClassName="menu-sidebar-root-class-name2"></MenuSidebar>
         <ContactOverview rootClassName="contact-overview-root-class-name"></ContactOverview>
       </div>
     </div>

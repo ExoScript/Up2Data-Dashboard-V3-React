@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useFunctions } from '../functions/app';
 
 import { Player } from '@lottiefiles/react-lottie-player'
 import PropTypes from 'prop-types'
@@ -6,9 +7,28 @@ import PropTypes from 'prop-types'
 import './login-box.css'
 
 const LoginBox = (props) => {
-  const [remeber, setRemeber] = useState(false)
-  const [loading, setLoading] = useState(false)
-  const [login_error, setLogin_error] = useState(false)
+  const {
+    clientID,
+    setClientID,
+    secretKey,
+    setSecretKey,
+    location,
+    eventChange,
+    userAuth,
+    remeber,
+    setRemeber,
+    loading,
+    setLoading,
+    login_error,
+    setLogin_error,
+    checkAuth
+  } = useFunctions();
+
+  useEffect(() => {
+    checkAuth()
+  }, []);
+
+
   return (
     <div className="login-box-login-box">
       <div className="login-box-container border-B shadow-bottom">
@@ -40,6 +60,9 @@ const LoginBox = (props) => {
             </div>
             <div className="login-box-container06">
               <input
+                onChange={eventChange}
+                id="clientID"
+                value={clientID}
                 type="text"
                 placeholder="Enter your Client-ID"
                 className="login-box-textinput input"
@@ -52,6 +75,9 @@ const LoginBox = (props) => {
             </div>
             <div className="login-box-container09">
               <input
+                onChange={eventChange}
+                id="secretKey"
+                value={secretKey}
                 type="text"
                 placeholder="Enter your Secret-Key"
                 className="login-box-textinput1 input"
@@ -103,7 +129,7 @@ const LoginBox = (props) => {
         </div>
       )}
       <div className="login-box-container16 border-T">
-        <div className="login-box-container17 button-gradient">
+        <div onClick={userAuth} className="login-box-container17 button-gradient">
           {!loading && <span>Login</span>}
           {loading && (
             <Player

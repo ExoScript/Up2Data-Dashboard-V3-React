@@ -3,15 +3,15 @@ import { getDatabase, ref, onValue, set } from "firebase/database";
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA3bxwbQbEPsqgxs6_85PWgtN1saX1wzrY",
-    authDomain: "up2data-aefb3.firebaseapp.com",
-    databaseURL: "https://up2data-aefb3-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "up2data-aefb3",
-    storageBucket: "up2data-aefb3.appspot.com",
-    messagingSenderId: "1046196695207",
-    appId: "1:1046196695207:web:5792d14c23855db6d0eb82",
-    measurementId: "G-CM46XE0972"
-};
+    apiKey: "AIzaSyA_nZ7OUO6YcfzqQ6ckJ6R9dmBT9yJfN8U",
+    authDomain: "up2data-v2.firebaseapp.com",
+    databaseURL: "https://up2data-v2-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "up2data-v2",
+    storageBucket: "up2data-v2.appspot.com",
+    messagingSenderId: "14946440071",
+    appId: "1:14946440071:web:25ba0469487c76d293f922",
+    measurementId: "G-GT24X74TBH"
+  };
 
 const app = initializeApp(firebaseConfig);
 
@@ -21,16 +21,12 @@ export async function authStatus(obj = { check: false }) {
     const clientID = localStorage.getItem("clientID")
     const secretKey = localStorage.getItem("secretKey")
     return new Promise(function (resolve) {
-        const database = ref(db, `clients/${clientID}`);
+        const database = ref(db, `client/cli-${clientID}`);
         onValue(database, (snapshot) => {
             const client = snapshot.val();
-            if (client && client.secretKey.key == secretKey) {
+            if (client && client.secret.key == secretKey) {
                 if (!obj.check) {
-                    localStorage.setItem("userName", client.fullName);
-                    localStorage.setItem("userEmail", client.email);
-                    localStorage.setItem("userCompany", client.company);
-                    localStorage.setItem("userWebsite", client.website);
-                    localStorage.setItem("userContacts", JSON.stringify(client.contacts));
+                    localStorage.setItem("client", client.id);
                 }
                 resolve(true);
             } else {
@@ -53,7 +49,6 @@ export async function update_database() {
 
 
         const client_db = ref(db, `clients/${clientID}`);
-        console.log(contacts);
         onValue(client_db, async (snapshot) => {
             let client = snapshot.val();
             if (fullName) {

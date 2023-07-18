@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import { authStatus } from '../database/app'
 
+
 export function useFunctions() {
   const location = useLocation();
   const history = useHistory();
@@ -18,6 +19,9 @@ export function useFunctions() {
   );
   const [isAuth, setIsAuth] = useState(
     localStorage.getItem("isAuth") || false
+  );
+  const [userContacts, setUserContacts] = useState(
+    localStorage.getItem("userContacts") || ""
   );
 
 
@@ -40,7 +44,6 @@ export function useFunctions() {
     if (clientID && secretKey) {
       setLoading(true);
       const status = await authStatus();
-      console.log(status);
       setLoading(false);
       if (status) {
         setIsAuth(true);
@@ -57,7 +60,6 @@ export function useFunctions() {
 
   const checkAuth = async (login = false) => {
     const status = localStorage.getItem("isAuth")
-    console.log(status);
     
     if (status == "true") {
       if(login){
@@ -69,11 +71,15 @@ export function useFunctions() {
   };
 
   const logout = async () => {
+    localStorage.clear();
+    localStorage.setItem("isAuth", false);
     history.push('/');
-    setIsAuth(false)
   };
 
-
+  const getList =  () => {
+    const list = JSON.parse(userContacts)
+    return list
+  };
 
 
   useEffect(() => {
@@ -103,6 +109,8 @@ export function useFunctions() {
     eventChange,
     userAuth,
     checkAuth,
-    logout
+    logout,
+    setIsAuth,
+    getList
   };
 }

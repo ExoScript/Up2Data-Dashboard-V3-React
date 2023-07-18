@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useFunctions } from '../functions/app';
 
 import PropTypes from 'prop-types'
 
@@ -10,6 +11,51 @@ import './company-overview.css'
 
 const CompanyOverview = (props) => {
   const [viewFilter, setViewFilter] = useState(false)
+
+  const {
+    getList
+  } = useFunctions();
+
+  const items = getList()
+  const itemsArray = Object.keys(items).map(key => {
+    let monitor;
+    let time;
+    let timeStatus;
+    let imageStatus;
+    let imageSrc;
+    let status;
+    let size = 0
+
+    if (items[key].monitor && items[key].monitor.status) {
+      status = 1
+      if(items[key].employees){
+        size = items[key].employees.length
+      }
+    } else {
+      status = 2
+    }
+
+    if (items[key].imageSrc && items[key].imageSrc != '-') {
+      imageStatus = true
+      imageSrc = items[key].imageSrc
+    }
+
+    return (
+       <li key={items[key].company_name} className="list-item">
+        <CompanyItem
+          name={items[key].company_name}
+          time={time}
+          timeStatus={timeStatus}
+          imageStatus={imageStatus}
+          image_src={imageSrc}
+          userData={items[key]}
+          status={status}
+          size ={`${size}`}
+          rootClassName="company-item-root-class-name"></CompanyItem>
+      </li>)
+  });
+
+
   return (
     <div className="company-overview-company-overview">
       <div className="company-overview-container gradient2 border-B shadow-bottom">
@@ -69,39 +115,7 @@ const CompanyOverview = (props) => {
         </div>
         <div className="company-overview-container16">
           <ul className="list">
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name21"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name20"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name19"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name18"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name17"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name16"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name15"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name14"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name13"></CompanyItem>
-            </li>
-            <li className="list-item">
-              <CompanyItem rootClassName="company-item-root-class-name12"></CompanyItem>
-            </li>
+            {itemsArray}
           </ul>
         </div>
         <div className="company-overview-container17 border-T">

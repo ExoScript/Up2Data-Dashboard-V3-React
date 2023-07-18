@@ -17,7 +17,7 @@ const Dashboard = (props) => {
         <meta property="og:title" content="Dashboard - Up2Data-Dashboard-V3" />
       </Helmet>
       <div className="dashboard-container01">
-        <MenuSidebar rootClassName="menu-sidebar-root-class-name"></MenuSidebar>
+        <MenuSidebar menu={1} rootClassName="menu-sidebar-root-class-name"></MenuSidebar>
         <div className="dashboard-container02">
           <div className="dashboard-container03 gradient2 border-B shadow-bottom">
             <SearchBar></SearchBar>

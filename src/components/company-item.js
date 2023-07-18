@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import './company-item.css'
 
 const CompanyItem = (props) => {
-  const [image, setImage] = useState(false)
+  const [image, setImage] = useState(props.imageStatus)
   const [scan, setScan] = useState(false)
-  const [status, setStatus] = useState(0)
+  const [status, setStatus] = useState(props.status)
   return (
     <div
       className={`company-item-company-item border-B ${props.rootClassName} `}
