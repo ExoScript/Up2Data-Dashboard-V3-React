@@ -10,50 +10,39 @@ import CompanyItem from './company-item'
 import './company-overview.css'
 
 const CompanyOverview = (props) => {
-  const [viewFilter, setViewFilter] = useState(false)
+  const [viewFilter, setViewFilter] = useState(false);
+  const [itemsFrom, setItemsFrom] = useState(0);
+  const [itemsTo, setItemsTo] = useState(25);
+
 
   const {
-    getList
+    list
   } = useFunctions();
 
-  const items = getList()
-  const itemsArray = Object.keys(items).map(key => {
-    let monitor;
-    let time;
-    let timeStatus;
-    let imageStatus;
-    let imageSrc;
-    let status;
-    let size = 0
-
-    if (items[key].monitor && items[key].monitor.status) {
-      status = 1
-      if(items[key].employees){
-        size = items[key].employees.length
-      }
-    } else {
-      status = 2
+  const itemsArray = Object.values(list({_type:'company'})).map(item => {
+    let size = 0;
+    if (item.employee.includes) {
+      size = item.employee.list.length
     }
-
-    if (items[key].imageSrc && items[key].imageSrc != '-') {
-      imageStatus = true
-      imageSrc = items[key].imageSrc
-    }
-
     return (
-       <li key={items[key].company_name} className="list-item">
+      <li key={item.id} className="list-item">
         <CompanyItem
-          name={items[key].company_name}
-          time={time}
-          timeStatus={timeStatus}
-          imageStatus={imageStatus}
-          image_src={imageSrc}
-          userData={items[key]}
-          status={status}
-          size ={`${size}`}
+          name={item.name}
+          status={1}
+          type={item.industry}
+          size={`${size}`}
+          folder={`${item.folder}`}
           rootClassName="company-item-root-class-name"></CompanyItem>
       </li>)
   });
+
+  const nextItems = () => {
+    let from = itemsFrom + 25
+    let to = itemsTo + 25
+    setItemsFrom(from);
+    setItemsTo(to);
+  };
+
 
 
   return (
@@ -68,7 +57,7 @@ const CompanyOverview = (props) => {
       <div className="company-overview-container02 border-B">
         <div className="company-overview-container03">
           <span className="company-overview-text opacity-90">Company</span>
-          <span className="company-overview-text01 opacity-70">List</span>
+          <span id="company" onClick={() => itemsArray} className="company-overview-text01 opacity-70">List</span>
         </div>
         <div className="company-overview-container04">
           <div className="button-gradient">
@@ -115,7 +104,7 @@ const CompanyOverview = (props) => {
         </div>
         <div className="company-overview-container16">
           <ul className="list">
-            {itemsArray}
+            {itemsArray.splice(itemsFrom, itemsTo)}
           </ul>
         </div>
         <div className="company-overview-container17 border-T">
@@ -148,7 +137,7 @@ const CompanyOverview = (props) => {
               <span className="company-overview-text14 opacity-90">1</span>
               <span className="opacity-40 font-size-10">2</span>
               <span className="opacity-40 font-size-10">3</span>
-              <div className="company-overview-container23">
+              <div onClick={nextItems} className="company-overview-container23">
                 <svg viewBox="0 0 1024 1024" className="company-overview-icon6">
                   <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
                 </svg>

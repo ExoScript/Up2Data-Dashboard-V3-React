@@ -8,9 +8,9 @@ import './menu-sidebar.css'
 
 const MenuSidebar = (props) => {
   const [menu, setMenu] = useState(props.menu);
-  const { checkAuth, logout, setIsAuth } = useFunctions();
+  const { check_authentication, logout, setIsAuth } = useFunctions();
   useEffect(() => {
-    checkAuth()
+    check_authentication()
   }, []);
   const log_out = () => {
     setIsAuth(false)

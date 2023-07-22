@@ -9,23 +9,18 @@ import './login-box.css'
 const LoginBox = (props) => {
   const {
     clientID,
-    setClientID,
     secretKey,
-    setSecretKey,
-    location,
     eventChange,
-    userAuth,
+    client_authentication,
     remeber,
     setRemeber,
     loading,
-    setLoading,
     login_error,
-    setLogin_error,
-    checkAuth
+    check_authentication
   } = useFunctions();
 
   useEffect(() => {
-    checkAuth()
+    check_authentication()
   }, []);
 
 
@@ -129,7 +124,7 @@ const LoginBox = (props) => {
         </div>
       )}
       <div className="login-box-container16 border-T">
-        <div onClick={userAuth} className="login-box-container17 button-gradient">
+        <div onClick={client_authentication} className="login-box-container17 button-gradient">
           {!loading && <span>Login</span>}
           {loading && (
             <Player

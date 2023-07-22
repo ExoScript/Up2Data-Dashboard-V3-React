@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
-import { authStatus } from '../database/app'
+import { authStatus, client_profil, getList, secretKey_validation } from '../database/app'
 
 
 export function useFunctions() {
@@ -24,6 +24,24 @@ export function useFunctions() {
     localStorage.getItem("userContacts") || ""
   );
 
+  const list = ({ _type, _id, _filter }) => {
+    // if (type == "company") {
+    //   let items;
+    //   if(id){
+    //     items = getList('company');
+    //   }
+    //   const test = getList('company');
+    //   return test
+    // }
+    // if (type == "contact") {
+    //   const test = getList('contact');
+    //   return test
+    // }
+
+    return getList({ type: _type, id: _id, filter: _filter });
+
+
+  }
 
   const eventChange = (event) => {
     const id = event.target.id;
@@ -40,17 +58,19 @@ export function useFunctions() {
     }
   };
 
-  const userAuth = async () => {
+  const client_authentication = async () => {
     if (clientID && secretKey) {
       setLoading(true);
-      const status = await authStatus();
-      setLoading(false);
+      const status = await secretKey_validation();
       if (status) {
         setIsAuth(true);
+        await client_profil();
+        setLoading(false);
         history.push('/dashboard');
       } else {
         history.push('/');
         setIsAuth(false);
+        setLoading(false);
         setLogin_error(true);
       }
     } else {
@@ -58,11 +78,12 @@ export function useFunctions() {
     }
   };
 
-  const checkAuth = async (login = false) => {
+
+
+  const check_authentication = async (login = false) => {
     const status = localStorage.getItem("isAuth")
-    
     if (status == "true") {
-      if(login){
+      if (login) {
         history.push('/dashboard');
       }
     } else {
@@ -76,12 +97,6 @@ export function useFunctions() {
     history.push('/');
   };
 
-  const getList =  () => {
-    const list = JSON.parse(userContacts)
-    return list
-  };
-
-
   useEffect(() => {
     localStorage.setItem("clientID", clientID);
     localStorage.setItem("secretKey", secretKey);
@@ -90,9 +105,6 @@ export function useFunctions() {
   useEffect(() => {
     localStorage.setItem("isAuth", isAuth);
   }, [isAuth]);
-
-
-  // Weitere Funktionen und Zustände hier hinzufügen...
 
   return {
     remeber,
@@ -107,10 +119,10 @@ export function useFunctions() {
     setSecretKey,
     location,
     eventChange,
-    userAuth,
-    checkAuth,
+    client_authentication,
+    check_authentication,
     logout,
     setIsAuth,
-    getList
+    list
   };
 }

@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue, set } from "firebase/database";
+import { getDatabase, ref, onValue, set, off } from "firebase/database";
 
 
 const firebaseConfig = {
@@ -11,11 +11,48 @@ const firebaseConfig = {
     messagingSenderId: "14946440071",
     appId: "1:14946440071:web:25ba0469487c76d293f922",
     measurementId: "G-GT24X74TBH"
-  };
+};
 
 const app = initializeApp(firebaseConfig);
-
 const db = getDatabase(app);
+
+export async function client_profil() {
+    const clientID = localStorage.getItem("clientID");
+    const profile = await getData(`client/cli-${clientID}`);
+    localStorage.setItem('profil', JSON.stringify(profile))
+};
+
+export function getList({ type, id, filter }) {
+    const profile = (JSON.parse(localStorage.getItem("profil"))).list[type];
+
+    if (id) {
+        return profile[id];
+    }
+    return profile;
+}
+
+async function getData(refLink) {
+    return new Promise(function (resolve) {
+        const database = ref(db, refLink);
+        onValue(database, (snapshot) => {
+            const data = snapshot.val();
+            resolve(data)
+        });
+    });
+}
+
+export async function secretKey_validation() {
+    const clientID = localStorage.getItem("clientID");
+    const secretKey = localStorage.getItem("secretKey");
+    const secret = await getData(`client/cli-${clientID}/secret`)
+    if (secret.status) {
+        return true;
+    };
+    return false;
+
+};
+
+
 
 export async function authStatus(obj = { check: false }) {
     const clientID = localStorage.getItem("clientID")

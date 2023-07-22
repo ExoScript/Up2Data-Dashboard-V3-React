@@ -85,7 +85,9 @@ const LeadsOverview = (props) => {
           <span className="leads-overview-text11 opacity-70">Reset filter</span>
         </div>
         <div className="leads-overview-container19">
+
           <div className="leads-overview-container20">
+
             <div className="leads-overview-container21">
               <LeadItem></LeadItem>
             </div>
@@ -95,20 +97,19 @@ const LeadsOverview = (props) => {
             <div className="leads-overview-container23">
               <LeadItem></LeadItem>
             </div>
-            <div className="leads-overview-container24">
-              <LeadItem></LeadItem>
-            </div>
+            <div className="Lead-Item-Clean"></div>
+
           </div>
+
           <div className="leads-overview-container25">
-            <div className="leads-overview-container26">
-              <LeadItem></LeadItem>
-            </div>
-            <div className="leads-overview-container27">
-              <LeadItem></LeadItem>
-            </div>
+
             <div className="Lead-Item-Clean"></div>
             <div className="Lead-Item-Clean"></div>
+            <div className="Lead-Item-Clean"></div>
+            <div className="Lead-Item-Clean"></div>
+            
           </div>
+
         </div>
         <div className="leads-overview-container30 border-T">
           <div className="leads-overview-container31">

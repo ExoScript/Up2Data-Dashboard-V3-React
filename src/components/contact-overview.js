@@ -7,9 +7,34 @@ import NotificationButton from './notification-button'
 import ProfileButton from './profile-button'
 import ContactItem from './contact-item'
 import './contact-overview.css'
+import { useFunctions } from '../functions/app'
 
 const ContactOverview = (props) => {
   const [viewFilter, setViewFilter] = useState(false)
+  const [itemsFrom, setItemsFrom] = useState(0);
+  const [itemsTo, setItemsTo] = useState(25);
+  const {
+    list
+  } = useFunctions();
+  const itemsArray = Object.values(list({ _type: 'contact' })).map(item => {
+    return (
+      <li key={item.id} className="list-item">
+        <ContactItem
+          name={item.name}
+          company={item.company}
+          rootClassName="contact-item-root-class-name6"
+          status={1}
+          className=""
+        ></ContactItem>
+      </li>)
+  });
+  const nextItems = () => {
+    let from = itemsFrom + 25
+    let to = itemsTo + 25
+    setItemsFrom(from);
+    setItemsTo(to);
+  };
+
   return (
     <div
       className={`contact-overview-company-overview ${props.rootClassName} `}
@@ -77,60 +102,7 @@ const ContactOverview = (props) => {
         </div>
         <div className="contact-overview-container16">
           <ul className="list">
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name2"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name10"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name9"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name8"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name7"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name6"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name5"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name4"
-                className=""
-              ></ContactItem>
-            </li>
-            <li className="list-item">
-              <ContactItem
-                rootClassName="contact-item-root-class-name3"
-                className=""
-              ></ContactItem>
-            </li>
+            {itemsArray.splice(itemsFrom, itemsTo)}
           </ul>
         </div>
         <div className="contact-overview-container17 border-T">
@@ -166,7 +138,7 @@ const ContactOverview = (props) => {
               <span className="contact-overview-text14 opacity-90">1</span>
               <span className="opacity-40 font-size-10">2</span>
               <span className="opacity-40 font-size-10">3</span>
-              <div className="contact-overview-container23">
+              <div onClick={nextItems} className="contact-overview-container23">
                 <svg viewBox="0 0 1024 1024" className="contact-overview-icon6">
                   <path
                     d="M366 708l196-196-196-196 60-60 256 256-256 256z"

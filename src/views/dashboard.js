@@ -8,8 +8,10 @@ import SearchBar from '../components/search-bar'
 import NotificationButton from '../components/notification-button'
 import ProfileButton from '../components/profile-button'
 import './dashboard.css'
+import { useFunctions } from '../functions/app'
 
 const Dashboard = (props) => {
+
   return (
     <div className="dashboard-container">
       <Helmet>
