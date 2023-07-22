@@ -241,6 +241,33 @@
   color: var(--dl-color-gray-white);
   background-color: var(--dl-color-primary-lila);
 }
+.button-red {
+  gap: var(--dl-space-space-g10);
+  fill: var(--dl-color-gray-white);
+  flex: 0 0 auto;
+  color: var(--dl-color-gray-white);
+  width: auto;
+  cursor: pointer;
+  height: 32px;
+  display: flex;
+  font-size: 10px;
+  box-shadow: 0px 0px 2px 0px rgba(212, 212, 212, 0.58);
+  transition: 0.1s;
+  align-items: center;
+  border-color: var(--dl-color-gray-border);
+  border-width: 1px;
+  padding-left: var(--dl-space-space-p20);
+  border-radius: var(--dl-radius-radius-radius8);
+  padding-right: var(--dl-space-space-p20);
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--dl-color-danger-300);
+}
+.button-red:hover {
+  fill: var(--dl-color-gray-white);
+  color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-danger-700);
+}
 .button-orange {
   gap: var(--dl-space-space-g10);
   fill: #D48A2B;
@@ -295,6 +322,12 @@
 }
 .button-lila:hover {
   opacity: 0.7;
+}
+.text-overflow {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .Content {
   font-size: 13px;

@@ -93,7 +93,7 @@ const LeadItem = (props) => {
                     {props.name}
                   </span>
                 </div>
-                <span className="lead-item-text07 opacity-70 font-size-10">
+                <span className="lead-item-text07 opacity-70 text-overflow font-size-10">
                   {props.new_position}
                 </span>
               </div>
@@ -119,10 +119,10 @@ const LeadItem = (props) => {
                 Terminated from:
               </span>
               <div className="lead-item-container17">
-                <span className="lead-item-text11 opacity-90">
-                  {props.old_company_name}
+                <span className="lead-item-text11 opacity-90 text-overflow">
+                  {props.old_company}
                 </span>
-                <span className="lead-item-text12 opacity-90">
+                <span className="lead-item-text12 opacity-90 text-overflow">
                   {props.old_position}
                 </span>
               </div>
@@ -132,10 +132,10 @@ const LeadItem = (props) => {
                 Newly employed by:
               </span>
               <div className="lead-item-container19">
-                <span className="lead-item-text14 opacity-90">
-                  {props.new_company_name}
+                <span className="lead-item-text14 opacity-90 text-overflow">
+                  {props.new_company}
                 </span>
-                <span className="lead-item-text15 opacity-90">
+                <span className="lead-item-text15 opacity-90 text-overflow">
                   {props.new_position}
                 </span>
               </div>
@@ -159,24 +159,22 @@ const LeadItem = (props) => {
 }
 
 LeadItem.defaultProps = {
-  position: 'Fullstack Developer',
-  new_position: 'Fullstack Developer',
-  name: 'Deivisson Almeida de Souza',
+  new_position: 'Position',
+  name: 'Full Name',
   rootClassName: '',
-  old_company_name: 'HeyData GmbH',
+  old_company: 'Old Company Name',
   date: '12.Feb.2023',
-  new_company_name: 'Flaschenpost GmbH',
-  old_position: 'Fullstack Developer',
+  new_company: 'New Company Name',
+  old_position: 'Old Position',
 }
 
 LeadItem.propTypes = {
-  position: PropTypes.string,
   new_position: PropTypes.string,
   name: PropTypes.string,
   rootClassName: PropTypes.string,
-  old_company_name: PropTypes.string,
+  old_company: PropTypes.string,
   date: PropTypes.string,
-  new_company_name: PropTypes.string,
+  new_company: PropTypes.string,
   old_position: PropTypes.string,
 }
 

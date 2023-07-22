@@ -17,7 +17,7 @@ const Leads = (props) => {
         <meta property="og:title" content="Leads - Up2Data-Dashboard-V3" />
       </Helmet>
       <div className="leads-container1">
-        <MenuSidebar menu={4} rootClassName="menu-sidebar-root-class-name4"></MenuSidebar>
+        <MenuSidebar rootClassName="menu-sidebar-root-class-name4"></MenuSidebar>
         <div className="leads-container2">
           <div className="leads-container3 gradient2 border-B shadow-bottom">
             <SearchBar></SearchBar>

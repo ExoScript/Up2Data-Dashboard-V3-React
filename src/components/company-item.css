@@ -8,7 +8,7 @@
   background-color: var(--dl-color-gray-white);
 }
 .company-item-container {
-  flex: 1;
+  width: 100%;
   cursor: pointer;
   height: 100%;
   display: flex;
@@ -23,6 +23,7 @@
   gap: var(--dl-space-space-g10);
   flex: 0.8;
   display: flex;
+  overflow: hidden;
   align-items: center;
   padding-top: var(--dl-space-space-p5);
   border-color: transparent;
@@ -55,8 +56,10 @@
 }
 .company-item-container03 {
   gap: var(--dl-space-space-g3);
-  flex: 0 0 auto;
+  flex: 1;
+  width: 100%;
   display: flex;
+  overflow: hidden;
   align-items: flex-start;
   flex-direction: column;
 }
@@ -236,7 +239,6 @@
   width: 14px;
   height: 14px;
 }
-
 
 
 

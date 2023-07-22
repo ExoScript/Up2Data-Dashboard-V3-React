@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 import './company-item.css'
 
 const CompanyItem = (props) => {
-  const [image, setImage] = useState(props.imageStatus)
+  const [image, setImage] = useState(false)
   const [scan, setScan] = useState(false)
-  const [status, setStatus] = useState(props.status)
+  const [status, setStatus] = useState(0)
   return (
     <div
       className={`company-item-company-item border-B ${props.rootClassName} `}
@@ -32,7 +32,9 @@ const CompanyItem = (props) => {
             )}
           </div>
           <div className="company-item-container03">
-            <span className="company-item-text opacity-90">{props.name}</span>
+            <span className="company-item-text opacity-90 text-overflow">
+              {props.name}
+            </span>
             <div className="company-item-container04">
               <span className="company-item-text01 opacity-90 font-size-10">
                 {props.size}
@@ -174,7 +176,7 @@ CompanyItem.defaultProps = {
   type: 'Customer Office Management',
   time: '00:00',
   image_src: 'https://play.teleporthq.io/static/svg/default-img.svg',
-  name: 'Company Name',
+  name: 'Name',
   size: '00',
   rootClassName: '',
 }

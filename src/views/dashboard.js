@@ -8,10 +8,8 @@ import SearchBar from '../components/search-bar'
 import NotificationButton from '../components/notification-button'
 import ProfileButton from '../components/profile-button'
 import './dashboard.css'
-import { useFunctions } from '../functions/app'
 
 const Dashboard = (props) => {
-
   return (
     <div className="dashboard-container">
       <Helmet>
@@ -19,7 +17,7 @@ const Dashboard = (props) => {
         <meta property="og:title" content="Dashboard - Up2Data-Dashboard-V3" />
       </Helmet>
       <div className="dashboard-container01">
-        <MenuSidebar menu={1} rootClassName="menu-sidebar-root-class-name"></MenuSidebar>
+        <MenuSidebar rootClassName="menu-sidebar-root-class-name"></MenuSidebar>
         <div className="dashboard-container02">
           <div className="dashboard-container03 gradient2 border-B shadow-bottom">
             <SearchBar></SearchBar>

@@ -85,35 +85,21 @@ const LeadsOverview = (props) => {
           <span className="leads-overview-text11 opacity-70">Reset filter</span>
         </div>
         <div className="leads-overview-container19">
-
-          <div className="leads-overview-container20">
-
-            <div className="leads-overview-container21">
-              <LeadItem></LeadItem>
-            </div>
-            <div className="leads-overview-container22">
-              <LeadItem></LeadItem>
-            </div>
-            <div className="leads-overview-container23">
-              <LeadItem></LeadItem>
-            </div>
-            <div className="Lead-Item-Clean"></div>
-
-          </div>
-
-          <div className="leads-overview-container25">
-
-            <div className="Lead-Item-Clean"></div>
-            <div className="Lead-Item-Clean"></div>
-            <div className="Lead-Item-Clean"></div>
-            <div className="Lead-Item-Clean"></div>
-            
-          </div>
-
+          <LeadItem rootClassName="lead-item-root-class-name2"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name3"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name6"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name5"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name4"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name7"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name11"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name10"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name9"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name8"></LeadItem>
+          <LeadItem rootClassName="lead-item-root-class-name12"></LeadItem>
         </div>
-        <div className="leads-overview-container30 border-T">
-          <div className="leads-overview-container31">
-            <div className="leads-overview-container32">
+        <div className="leads-overview-container20 border-T">
+          <div className="leads-overview-container21">
+            <div className="leads-overview-container22">
               <span className="leads-overview-text12 opacity-70 font-size-10">
                 Display
                 <span
@@ -129,9 +115,9 @@ const LeadsOverview = (props) => {
               <span className="leads-overview-text15">1300</span>
             </div>
           </div>
-          <div className="leads-overview-container33">
-            <div className="leads-overview-container34">
-              <div className="leads-overview-container35">
+          <div className="leads-overview-container23">
+            <div className="leads-overview-container24">
+              <div className="leads-overview-container25">
                 <svg viewBox="0 0 1024 1024" className="leads-overview-icon10">
                   <path d="M658 708l-60 60-256-256 256-256 60 60-196 196z"></path>
                 </svg>
@@ -139,7 +125,7 @@ const LeadsOverview = (props) => {
               <span className="leads-overview-text16 opacity-90">1</span>
               <span className="opacity-40 font-size-10">2</span>
               <span className="opacity-40 font-size-10">3</span>
-              <div className="leads-overview-container36">
+              <div className="leads-overview-container26">
                 <svg viewBox="0 0 1024 1024" className="leads-overview-icon12">
                   <path d="M366 708l196-196-196-196 60-60 256 256-256 256z"></path>
                 </svg>

@@ -275,57 +275,16 @@
   width: 100%;
   display: flex;
   overflow: scroll;
+  flex-wrap: wrap;
   align-items: flex-start;
   padding-top: var(--dl-space-space-p30);
   padding-left: var(--dl-space-space-p30);
   padding-right: var(--dl-space-space-p30);
-  flex-direction: column;
+  flex-direction: row;
   padding-bottom: var(--dl-space-space-p30);
   background-color: var(--dl-color-gray-white);
 }
 .leads-overview-container20 {
-  gap: var(--dl-space-space-g20);
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container21 {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container22 {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container23 {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container24 {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container25 {
-  gap: var(--dl-space-space-g20);
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container26 {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container27 {
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-}
-.leads-overview-container30 {
   flex: 0 0 auto;
   width: 100%;
   height: 55px;
@@ -337,7 +296,7 @@
   justify-content: space-between;
   background-color: var(--dl-color-background-bg1);
 }
-.leads-overview-container31 {
+.leads-overview-container21 {
   flex: 1;
   height: 100%;
   display: flex;
@@ -345,7 +304,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-.leads-overview-container32 {
+.leads-overview-container22 {
   gap: var(--dl-space-space-g5);
   width: 163px;
   height: 100%;
@@ -367,20 +326,20 @@
   font-style: normal;
   font-weight: 700;
 }
-.leads-overview-container33 {
+.leads-overview-container23 {
   flex: 1;
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
 }
-.leads-overview-container34 {
+.leads-overview-container24 {
   gap: var(--dl-space-space-g20);
   display: flex;
   align-items: center;
   flex-direction: row;
 }
-.leads-overview-container35 {
+.leads-overview-container25 {
   fill: var(--dl-color-primary-content);
   flex: 0 0 auto;
   width: 32px;
@@ -404,7 +363,7 @@
   font-style: normal;
   font-weight: 700;
 }
-.leads-overview-container36 {
+.leads-overview-container26 {
   fill: var(--dl-color-primary-content);
   flex: 0 0 auto;
   width: 32px;
