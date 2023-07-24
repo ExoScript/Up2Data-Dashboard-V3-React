@@ -8,6 +8,9 @@ import './lead-item.css'
 const LeadItem = (props) => {
   const [hover, setHover] = useState(false)
   const [profile_image, setProfile_image] = useState(false)
+
+
+  
   return (
     <div
       onMouseEnter={() => setHover(true)}

@@ -1,12 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useFunctions } from '../functions/app';
 
 import PropTypes from 'prop-types'
 
 import './menu-sidebar.css'
 
 const MenuSidebar = (props) => {
-  const [menu, setMenu] = useState(1)
+  const [menu, setMenu] = useState(props.menu);
+  const { check_authentication, logout, setIsAuth } = useFunctions();
+  useEffect(() => {
+    check_authentication()
+  }, []);
+  const log_out = () => {
+    setIsAuth(false)
+    logout();
+  };
+
   return (
     <div
       className={`menu-sidebar-menu-sidebar border-R ${props.rootClassName} `}
@@ -137,14 +147,14 @@ const MenuSidebar = (props) => {
           </Link>
         </div>
       </div>
-      <div className="menu-sidebar-container5 border-T">
+      <div onClick={log_out} className="menu-sidebar-container5 border-T">
         <svg viewBox="0 0 1024 1024" className="menu-sidebar-icon16">
           <path
             d="M170 214v596h342v86h-342q-34 0-59-26t-25-60v-596q0-34 25-60t59-26h342v86h-342zM726 298l212 214-212 214-60-62 110-110h-434v-84h434l-110-112z"
             className=""
           ></path>
         </svg>
-        <span className="">Logout</span>
+        <span  className="">Logout</span>
       </div>
     </div>
   )

@@ -4,8 +4,32 @@ import PropTypes from 'prop-types'
 
 import LeadItem from './lead-item'
 import './leads-overview.css'
+import { useFunctions } from '../functions/app'
 
 const LeadsOverview = (props) => {
+  const {
+    list
+  } = useFunctions();
+  const itemsArray = Object.values(list({ _type: 'contact' })).map(item => {
+    if (item.priority) {
+      return (
+        <LeadItem  key={item.od} rootClassName="lead-item-root-class-name2"
+        name={item.name}
+        new_company={item.change.to.company}
+        new_position={item.change.to.position}
+        old_company={item.change.from.company}
+        old_position={item.change.from.position}
+        >
+        </LeadItem>)
+    }
+    
+  });
+
+  const array = [
+    <LeadItem name="Dave" key="1" rootClassName="lead-item-root-class-name2"></LeadItem>,
+    <LeadItem name="Dave" key="2" rootClassName="lead-item-root-class-name2"></LeadItem>
+  ]
+
   return (
     <div className="leads-overview-leads-overview">
       <div className="leads-overview-container">
@@ -85,17 +109,7 @@ const LeadsOverview = (props) => {
           <span className="leads-overview-text11 opacity-70">Reset filter</span>
         </div>
         <div className="leads-overview-container19">
-          <LeadItem rootClassName="lead-item-root-class-name2"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name3"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name6"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name5"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name4"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name7"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name11"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name10"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name9"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name8"></LeadItem>
-          <LeadItem rootClassName="lead-item-root-class-name12"></LeadItem>
+          {itemsArray}
         </div>
         <div className="leads-overview-container20 border-T">
           <div className="leads-overview-container21">

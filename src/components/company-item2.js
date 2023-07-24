@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 import './company-item2.css'
 
 const CompanyItem2 = (props) => {
-  const [status, setStatus] = useState(0)
+  const [status, setStatus] = useState(props.status)
   const [select, setSelect] = useState(false)
   const [image, setImage] = useState(false)
   return (

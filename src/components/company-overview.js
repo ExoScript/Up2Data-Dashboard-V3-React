@@ -7,6 +7,7 @@ import NotificationButton from './notification-button'
 import ProfileButton from './profile-button'
 import CompanyItem2 from './company-item2'
 import './company-overview.css'
+import { useFunctions } from '../functions/app'
 
 const CompanyOverview = (props) => {
   const [select, setSelect] = useState(false)
@@ -16,6 +17,35 @@ const CompanyOverview = (props) => {
   const [viewFilter, setViewFilter] = useState(false)
   const [backBtn, setBackBtn] = useState(false)
   const [selectAll, setSelectAll] = useState(false)
+  const [itemsFrom, setItemsFrom] = useState(0);
+  const [itemsTo, setItemsTo] = useState(25);
+
+  const {
+    list
+  } = useFunctions();
+
+  const itemsArray = Object.values(list({ _type: 'company' })).map(item => {
+    let size = 0;
+    if (item.employee.includes) {
+      size = item.employee.list.length
+    }
+    return (
+      <li key={item.id} className="list-item">
+        <CompanyItem2
+        name={item.name}
+        status={1}
+        size={size}
+        >
+        </CompanyItem2>
+      </li>)
+  });
+  const nextItems = () => {
+    let from = itemsFrom + 25
+    let to = itemsTo + 25
+    setItemsFrom(from);
+    setItemsTo(to);
+  };
+
   return (
     <div className="company-overview-company-overview">
       <div className="company-overview-container gradient2 border-B shadow-bottom">
@@ -106,15 +136,7 @@ const CompanyOverview = (props) => {
         </div>
         <div className="company-overview-container20">
           <ul className="company-overview-ul list">
-            <li className="list-item">
-              <CompanyItem2></CompanyItem2>
-            </li>
-            <li className="list-item">
-              <CompanyItem2></CompanyItem2>
-            </li>
-            <li className="list-item">
-              <CompanyItem2></CompanyItem2>
-            </li>
+          {itemsArray.splice(itemsFrom, itemsTo)}
           </ul>
         </div>
         <div className="company-overview-container21 border-T">
