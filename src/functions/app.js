@@ -37,8 +37,7 @@ export function useFunctions() {
     //   const test = getList('contact');
     //   return test
     // }
-
-    return getList({ type: _type, id: _id, filter: _filter });
+    // return getList({ listType: _type, clientID: clientID, filter: _filter });
 
 
   }

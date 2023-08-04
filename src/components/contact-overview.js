@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import PropTypes from 'prop-types'
 
@@ -8,26 +8,39 @@ import ProfileButton from './profile-button'
 import ContactItem from './contact-item'
 import './contact-overview.css'
 import { useFunctions } from '../functions/app'
+import { getList } from '../database/app'
+
 
 const ContactOverview = (props) => {
   const [viewFilter, setViewFilter] = useState(false)
   const [itemsFrom, setItemsFrom] = useState(0);
   const [itemsTo, setItemsTo] = useState(25);
-  const {
-    list
-  } = useFunctions();
-  const itemsArray = Object.values(list({ _type: 'contact' })).map(item => {
-    return (
-      <li key={item.id} className="list-item">
-        <ContactItem
-          name={item.name}
-          company={item.company}
-          rootClassName="contact-item-root-class-name6"
-          status={1}
-          className=""
-        ></ContactItem>
-      </li>)
-  });
+  const [items, setItems] = useState([]);
+
+
+
+  useEffect(async () => {
+    await getListTest()
+  }, [items]);
+
+  const getListTest = async () => {
+    let dbList = await getList('contact');
+    const test = Object.values(dbList).map(item => {
+      
+      return (
+        <li key={item.id} className="list-item">
+          <ContactItem
+            name={item.name}
+            company={item.company}
+            rootClassName="contact-item-root-class-name6"
+            status={1}
+            className=""
+          ></ContactItem>
+        </li>);
+    });
+    setItems(test.splice(0, 25))
+  }
+
   const nextItems = () => {
     let from = itemsFrom + 25
     let to = itemsTo + 25
@@ -102,7 +115,7 @@ const ContactOverview = (props) => {
         </div>
         <div className="contact-overview-container16">
           <ul className="list">
-            {itemsArray.splice(itemsFrom, itemsTo)}
+            {items}
           </ul>
         </div>
         <div className="contact-overview-container17 border-T">

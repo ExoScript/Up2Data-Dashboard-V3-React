@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import PropTypes from 'prop-types'
 
@@ -8,6 +8,7 @@ import ProfileButton from './profile-button'
 import CompanyItem2 from './company-item2'
 import './company-overview.css'
 import { useFunctions } from '../functions/app'
+import { getList } from '../database/app'
 
 const CompanyOverview = (props) => {
   const [select, setSelect] = useState(false)
@@ -19,32 +20,42 @@ const CompanyOverview = (props) => {
   const [selectAll, setSelectAll] = useState(false)
   const [itemsFrom, setItemsFrom] = useState(0);
   const [itemsTo, setItemsTo] = useState(25);
+  const [items, setItems] = useState([]);
 
-  const {
-    list
-  } = useFunctions();
+  useEffect(async () => {
+    await getListTest()
+  }, []);
 
-  const itemsArray = Object.values(list({ _type: 'company' })).map(item => {
-    let size = 0;
-    if (item.employee.includes) {
-      size = item.employee.list.length
-    }
-    return (
-      <li key={item.id} className="list-item">
-        <CompanyItem2
-        name={item.name}
-        status={1}
-        size={size}
-        >
-        </CompanyItem2>
-      </li>)
-  });
+  const getListTest = async () => {
+    let dbList = await getList('company');
+    const test = Object.values(dbList).map(item => {
+      let size = 0;
+      if (item.employee.includes) {
+        size = item.employee.list.length
+      }
+      return (
+        <li key={item.id} className="list-item">
+          <CompanyItem2
+            name={item.name}
+            status={1}
+            size={5}
+          >
+          </CompanyItem2>
+        </li>);
+    });
+    setItems(test.splice(0, 25))
+  }
+
+
+
   const nextItems = () => {
     let from = itemsFrom + 25
     let to = itemsTo + 25
     setItemsFrom(from);
     setItemsTo(to);
   };
+
+
 
   return (
     <div className="company-overview-company-overview">
@@ -136,7 +147,7 @@ const CompanyOverview = (props) => {
         </div>
         <div className="company-overview-container20">
           <ul className="company-overview-ul list">
-          {itemsArray.splice(itemsFrom, itemsTo)}
+            {items}
           </ul>
         </div>
         <div className="company-overview-container21 border-T">

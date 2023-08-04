@@ -7,7 +7,7 @@ import './lead-item.css'
 
 const LeadItem = (props) => {
   const [hover, setHover] = useState(false)
-  const [profile_image, setProfile_image] = useState(false)
+  const [profile_image, setProfile_image] = useState(props.profil_image)
 
 
   
@@ -26,7 +26,7 @@ const LeadItem = (props) => {
                   {profile_image && (
                     <img
                       alt="image"
-                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHx1c2VyfGVufDB8fHx8MTY4ODU5Mjg4N3ww&amp;ixlib=rb-4.0.3&amp;w=200"
+                      src={props.imageSrc}
                       className="lead-item-image"
                     />
                   )}
@@ -62,7 +62,7 @@ const LeadItem = (props) => {
                   {profile_image && (
                     <img
                       alt="image"
-                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixid=M3w5MTMyMXwwfDF8c2VhcmNofDE1fHx1c2VyfGVufDB8fHx8MTY4ODU5Mjg4N3ww&amp;ixlib=rb-4.0.3&amp;w=200"
+                      src={props.imageSrc}
                       className="lead-item-image1"
                     />
                   )}

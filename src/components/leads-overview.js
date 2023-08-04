@@ -1,34 +1,51 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 import PropTypes from 'prop-types'
 
 import LeadItem from './lead-item'
 import './leads-overview.css'
 import { useFunctions } from '../functions/app'
+import { getList } from '../database/app'
+
 
 const LeadsOverview = (props) => {
-  const {
-    list
-  } = useFunctions();
-  const itemsArray = Object.values(list({ _type: 'contact' })).map(item => {
-    if (item.priority) {
-      return (
-        <LeadItem  key={item.od} rootClassName="lead-item-root-class-name2"
-        name={item.name}
-        new_company={item.change.to.company}
-        new_position={item.change.to.position}
-        old_company={item.change.from.company}
-        old_position={item.change.from.position}
-        >
-        </LeadItem>)
-    }
-    
-  });
+  const [items, setItems] = useState([]);
 
-  const array = [
-    <LeadItem name="Dave" key="1" rootClassName="lead-item-root-class-name2"></LeadItem>,
-    <LeadItem name="Dave" key="2" rootClassName="lead-item-root-class-name2"></LeadItem>
-  ]
+  useEffect(async () => {
+    await getListTest()
+  }, []);
+
+  const getListTest = async () => {
+    let dbList = await getList('contact');
+    const test = Object.values(dbList).map(item => {
+      if (item.changeTo) {
+        if (item.changeTo.change && item.changeTo.url) {
+          let newCom = item.changeTo.description.replace(' · Teilzeit','').replace(' · Vollzeit','');
+          let newDep = item.changeTo.department
+          
+          let oldCom = item.companyProfil.name
+          let oldDep =item.department.name
+          return (
+            <LeadItem key={item.id} rootClassName="lead-item-root-class-name2"
+              name={item.name}
+              new_company={newCom}
+              new_position={newDep}
+              old_company={oldCom}
+              old_position={oldDep}
+              imageSrc = {item.changeTo.imageSrc}
+              profil_image = {true}
+            >
+            </LeadItem>);
+
+        }
+      }
+     
+    });
+    setItems(test)
+  }
+
+
+
 
   return (
     <div className="leads-overview-leads-overview">
@@ -109,7 +126,7 @@ const LeadsOverview = (props) => {
           <span className="leads-overview-text11 opacity-70">Reset filter</span>
         </div>
         <div className="leads-overview-container19">
-          {itemsArray}
+          {items}
         </div>
         <div className="leads-overview-container20 border-T">
           <div className="leads-overview-container21">

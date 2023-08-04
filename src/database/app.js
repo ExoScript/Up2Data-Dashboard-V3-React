@@ -18,17 +18,21 @@ const db = getDatabase(app);
 
 export async function client_profil() {
     const clientID = localStorage.getItem("clientID");
-    const profile = await getData(`client/cli-${clientID}`);
+    const profile = await getData(`client/cli-${clientID}/company`);
     localStorage.setItem('profil', JSON.stringify(profile))
 };
 
-export function getList({ type, id, filter }) {
-    const profile = (JSON.parse(localStorage.getItem("profil"))).list[type];
+export async function getList(listType) {
+    const clientID = localStorage.getItem("clientID");
+    const list = await getData(`client/cli-${clientID}/list/${listType}`)
+    return list
 
-    if (id) {
-        return profile[id];
-    }
-    return profile;
+    // const profile = (JSON.parse(localStorage.getItem("profil"))).list[type];
+
+    // if (id) {
+    //     return profile[id];
+    // }
+    // return profile;
 }
 
 async function getData(refLink) {
